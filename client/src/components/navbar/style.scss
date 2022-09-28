@@ -1,0 +1,33 @@
+@import "../../sass/index";
+.navbar {
+  background-color: $main-color;
+  .navbar__container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: $sec-color;
+    @include flex(center, space-between);
+    .navbar__logo {
+      a {
+        font-weight: bold;
+        font-size: 25px;
+        letter-spacing: 1px;
+      }
+    }
+    .navbar__btn {
+      display: flex;
+      .btn {
+        padding: 7px 10px;
+        color: #0071c2;
+        background-color: $sec-color;
+        font-weight: 600;
+        cursor: pointer;
+      }
+      .navbar__btn-logout {
+        margin-left: 15px;
+      }
+      .navbar__btn-login {
+        margin-left: 15px;
+      }
+    }
+  }
+}

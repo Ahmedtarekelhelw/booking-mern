@@ -1,0 +1,12 @@
+@import "../../sass/_mixin.scss";
+.search__container {
+  @include flex(flex-start, space-between);
+  margin-top: 30px;
+  gap: 20px;
+  .search__result {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 3;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../sass/index.scss";
+.homes__love {
+  h2 {
+    margin: 15px 0;
+  }
+  .homes__love-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    .homes__love-card {
+      border-radius: 5px;
+      user-select: none;
+      cursor: pointer;
+      .homes__love-card-img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: 5px;
+      }
+      .homes__love-card-info {
+        span {
+          display: block;
+          color: gray;
+          font-size: 15px;
+        }
+        h3 {
+          font-size: 16px;
+          font-weight: 500;
+          margin: 5px 0;
+        }
+        .homes__love-card-reviews {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          strong {
+            color: #262626;
+            font-weight: 500;
+          }
+          .rate {
+            width: 32px;
+            height: 32px;
+            background-color: #003580;
+            color: #fff;
+            @include flex(center, center);
+            border-radius: 5px 5px 5px 0;
+            font-weight: 500;
+          }
+          .reviews {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

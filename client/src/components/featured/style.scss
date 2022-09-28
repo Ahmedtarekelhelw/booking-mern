@@ -1,0 +1,28 @@
+.featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 50px;
+  z-index: 1;
+  .featured__card {
+    z-index: 1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    .featured__card-Img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    .featured__card-text {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #fff;
+      h2 {
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

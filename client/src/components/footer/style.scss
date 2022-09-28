@@ -1,0 +1,18 @@
+footer {
+  padding: 40px 0 20px 0;
+  font-size: 12px;
+
+  .footer__links {
+    display: flex;
+    justify-content: space-between;
+    .footer__links-list {
+      .footer__links-list-item {
+        margin-bottom: 15px;
+        color: #003580;
+        cursor: pointer;
+      }
+    }
+  }
+  p {
+  }
+}

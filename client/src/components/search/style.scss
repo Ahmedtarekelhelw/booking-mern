@@ -1,0 +1,103 @@
+@import "../../sass/index.scss";
+
+.header__bottom-search {
+  &:first-child {
+    grid-column: span 5;
+  }
+  &:nth-child(2) {
+    grid-column: 6 / span 3;
+  }
+  &:nth-child(3) {
+    grid-column: 9 / span 3;
+  }
+  padding-right: 5px;
+  @include flex(center, flex-start);
+  border-right: 3px solid #febb02;
+  gap: 10px;
+  margin-left: 20px;
+  user-select: none;
+
+  .header__bottom-search-input {
+    width: 100%;
+  }
+
+  .header__bottom-icon {
+    color: #aeaeae;
+  }
+  .header__bottom-search-text {
+    color: #000;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+  }
+}
+
+.header__bottom-search-button {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #0071c2;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 0 30px;
+  background-color: #0071c2;
+}
+
+.header__bottom-search-options {
+  width: 350px;
+  height: 170px;
+  position: absolute;
+  top: 60px;
+  @include flex(stretch, space-around);
+  flex-direction: column;
+  right: 120px;
+  background-color: #fff;
+  color: gray;
+  border-radius: 5px;
+  padding: 20px;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  .header__bottom-search-option {
+    @include flex(center, space-between);
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+    .title {
+      text-transform: capitalize;
+      font-weight: 500;
+      color: #000;
+    }
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: #000;
+      .i,
+      .d {
+        width: 37px;
+        font-size: 20px;
+        height: 37px;
+        border: 1px solid #0071c2;
+        color: #0071c2;
+        cursor: pointer;
+        background-color: #fff;
+        &:disabled {
+          cursor: not-allowed;
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+}
+
+.date {
+  position: absolute;
+  top: 60px;
+  left: 440px;
+  width: 400px;
+  .rdrMonth {
+    width: 100%;
+  }
+}

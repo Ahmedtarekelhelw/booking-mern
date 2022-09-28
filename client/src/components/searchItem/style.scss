@@ -1,0 +1,48 @@
+@import "../../sass/";
+.search__item {
+  flex: 1;
+  background-color: #febb02;
+  padding: 15px;
+  border-radius: 10px;
+  height: max-content;
+  position: sticky;
+  top: 10px;
+
+  h2 {
+    margin-bottom: 15px;
+  }
+  form {
+    .search__item-field {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 15px;
+      input {
+        padding: 10px;
+        font-size: 15px;
+      }
+      .search__item-field-date {
+        background-color: #fff;
+        padding: 10px;
+        user-select: none;
+      }
+      .option {
+        @include flex(center, space-between);
+        input {
+          width: 70px;
+        }
+      }
+    }
+    .search__item-btn {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #0071c2;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      font-size: 17px;
+      margin-top: 10px;
+    }
+  }
+}

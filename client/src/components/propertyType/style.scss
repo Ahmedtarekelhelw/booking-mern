@@ -1,0 +1,29 @@
+.property__type {
+  h2 {
+    margin: 15px 0;
+  }
+  .property__type-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    .property__type-card {
+      .property__type-card-img {
+        width: 100%;
+        height: 70%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+      .property__type-card-text {
+        margin-top: 10px;
+        text-transform: capitalize;
+        h3 {
+          font-size: 16px;
+        }
+        span {
+          color: gray;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

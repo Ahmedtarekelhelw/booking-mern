@@ -1,0 +1,116 @@
+@import "../../sass/";
+
+%btn {
+  padding: 10px 20px;
+  background-color: #0071c2;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.single__hotel {
+  margin-top: 20px;
+  .single__hotel-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.613);
+    z-index: 999;
+    @include flex(center, center);
+    user-select: none;
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 30px;
+      color: lightgray;
+      cursor: pointer;
+    }
+    img {
+      width: 80%;
+      height: 80vh;
+    }
+    .arrow {
+      margin: 20px;
+      font-size: 50px;
+      color: lightgray;
+      cursor: pointer;
+    }
+  }
+  .single__hotel-info {
+    @include flex(flex-start, space-between);
+    .single__hotel-info-text {
+      .single__hotel-info-title {
+        font-size: 27px;
+        margin-bottom: 5px;
+      }
+      .single__hotel-info-location {
+        font-size: 15px;
+        span {
+          margin-left: 10px;
+        }
+      }
+      .single__hotel-info-distance {
+        color: #0071c2;
+        font-weight: 500;
+        display: block;
+        margin: 5px 0;
+      }
+      .single__hotel-info-price {
+        color: #008009;
+        font-weight: 500;
+      }
+    }
+    .single__hotel-btn {
+      @extend %btn;
+    }
+  }
+  .single__hotel-img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin: 15px 0;
+    img {
+      width: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+  .single__hotel-desc {
+    display: flex;
+    gap: 10px;
+    .single__hotel-desc-text {
+      flex: 3;
+      h1 {
+      }
+      p {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+    }
+    .single__hotel-desc-box {
+      background-color: #ebf3ff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 1;
+      h1 {
+        font-size: 18px;
+        color: #555;
+      }
+      span {
+        font-size: 14px;
+      }
+      h2 {
+        font-weight: 300;
+      }
+      button {
+        @extend %btn;
+      }
+    }
+  }
+}

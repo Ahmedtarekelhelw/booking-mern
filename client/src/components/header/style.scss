@@ -1,0 +1,68 @@
+@import "../../sass/index.scss";
+.header {
+  background-color: $main-color;
+  padding: 20px 0 40px 0;
+  color: $sec-color;
+  position: relative;
+  &.home {
+    padding: 20px 0 100px 0;
+  }
+  .header__container {
+    .header__top {
+      .header__top-list {
+        display: flex;
+        gap: 30px;
+        .header__top-list-item {
+          padding: 10px;
+          border-radius: 15px;
+
+          cursor: pointer;
+          &.active {
+            border: 1px solid $sec-color;
+          }
+          span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+
+    .header__center {
+      margin: 50px 0;
+      .header__center-title {
+        font-size: 50px;
+      }
+      .header__center-desc {
+        font-size: 25px;
+        padding: 10px 0 30px;
+      }
+      .header__center-btn {
+        background-color: #0071c2;
+        color: $sec-color;
+        padding: 15px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
+
+    .header__bottom {
+      background-color: $sec-color;
+      border-radius: 5px;
+      border: 3px solid #febb02;
+      position: absolute;
+      width: 100%;
+      left: 50%;
+      transform: translatex(-50%);
+      max-width: 1100px;
+      bottom: -25px;
+      z-index: 2;
+      .header__bottom-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        height: 50px;
+      }
+    }
+  }
+}
